@@ -1,4 +1,5 @@
 var height, width, col;
+document.addEventListener()
 document.getElementById('sizePicker').submit(function(event) {
     event.preventDefult();
     height = document.getElementById('inputHeight').val();
@@ -7,7 +8,7 @@ document.getElementById('sizePicker').submit(function(event) {
 })
 
 function makeGrid(l, o){
-    document.getElementById('table tr').remove();
+    document.getElementByTagName('table tr').remove();
     for (var r = 1; r <= l; r++){
         document.getElementById('pixelCanvas').append('<tr id = box' + r + '></tr>');
         for(var c = 1; c <= o; c++){
@@ -15,7 +16,7 @@ function makeGrid(l, o){
         }
     }
 
-    document.getElementById("td").click(function addColor() {
+    document.getElementByTagName("td").click(function addColor() {
         col = document.getElementById("colorPicker").val();
 
     })
